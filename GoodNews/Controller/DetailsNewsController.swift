@@ -36,7 +36,6 @@ class DetailsNewsController: UITableViewController {
     }
     
     
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.articleListVM == nil ? 0 : self.articleListVM.numberOfSections
     }
@@ -53,8 +52,8 @@ class DetailsNewsController: UITableViewController {
         let articleVM = self.articleListVM.articleAtIndex(indexPath.row)
         cell.titleLabel.text = articleVM.title
         cell.descriptionLabel.text = articleVM.description
-        return cell
         
+        return cell
     }
     
 }
