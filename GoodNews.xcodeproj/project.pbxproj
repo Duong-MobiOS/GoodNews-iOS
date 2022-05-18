@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13822F382834933700ADC3F5 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13822F372834933700ADC3F5 /* NewsController.swift */; };
 		5B65BC1B282E3A23004F4914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65BC1A282E3A23004F4914 /* AppDelegate.swift */; };
 		5B65BC1D282E3A23004F4914 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65BC1C282E3A23004F4914 /* SceneDelegate.swift */; };
 		5B65BC22282E3A23004F4914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B65BC20282E3A23004F4914 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13822F372834933700ADC3F5 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		5B65BC17282E3A23004F4914 /* GoodNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B65BC1A282E3A23004F4914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B65BC1C282E3A23004F4914 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5B65BC2F282E3AF3004F4914 /* DetailsNewsController.swift */,
+				13822F372834933700ADC3F5 /* NewsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13822F382834933700ADC3F5 /* NewsController.swift in Sources */,
 				5B65BC1B282E3A23004F4914 /* AppDelegate.swift in Sources */,
 				5B65BC30282E3AF3004F4914 /* DetailsNewsController.swift in Sources */,
 				5B65BC34282E454E004F4914 /* Webservice.swift in Sources */,

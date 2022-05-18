@@ -14,4 +14,11 @@ struct ArticleList: Decodable {
 struct Article: Decodable {
     let title: String
     let description: String?
+    let author: String?
+    let publishedAt: String?
+    let content: String?
+    let urlToImage: String?
+    let url: String?
 }
+
+

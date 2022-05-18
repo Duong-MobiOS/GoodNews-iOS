@@ -44,4 +44,23 @@ extension ArticleViewModel {
     var description: String {
         return self.article.description ?? ""
     }
+    
+    var author: String {
+        return self.article.author ?? "No Author"
+    }
+    
+    var publishedAt: String {
+        return self.article.publishedAt ?? "No Date"
+    }
+    
+    var content: String {
+        return self.article.content ?? "No Content"
+    }
+    
+    var urlToImage: String {
+        return self.article.urlToImage ?? ""
+    }
+    var url: String {
+        return self.article.url ?? ""
+    }
 }

@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 
+
 class DetailsNewsController: UITableViewController {
-    
+
     private var articleListVM: ArticleListViewModel!
     
     override func viewDidLoad() {
@@ -17,8 +18,11 @@ class DetailsNewsController: UITableViewController {
         setup()
     }
     
+
+    
     private func setup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .always
         
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=590f4a541501431bbad210b5e2a6c9e8")!
         
@@ -28,13 +32,13 @@ class DetailsNewsController: UITableViewController {
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    self.
                 }
             }
             
         }
         
     }
-    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.articleListVM == nil ? 0 : self.articleListVM.numberOfSections
@@ -52,8 +56,18 @@ class DetailsNewsController: UITableViewController {
         let articleVM = self.articleListVM.articleAtIndex(indexPath.row)
         cell.titleLabel.text = articleVM.title
         cell.descriptionLabel.text = articleVM.description
-        
         return cell
     }
     
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let articleVM = self.articleListVM.articleAtIndex(indexPath.row)
+        
+        if let newsVC = storyboard?.instantiateViewController(identifier: "NewsVC") as? NewsController {
+            self.navigationController?.pushViewController(newsVC, animated: true)
+            newsVC.urlString = articleVM.url
+        }
+    }
+    
 }
+
