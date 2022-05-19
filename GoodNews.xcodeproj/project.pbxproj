@@ -18,6 +18,7 @@
 		5B65BC37282E4A62004F4914 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65BC36282E4A62004F4914 /* Article.swift */; };
 		5B65BC3A282E604D004F4914 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65BC39282E604D004F4914 /* ArticleViewModel.swift */; };
 		5B65BC3D282E6441004F4914 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65BC3C282E6441004F4914 /* ArticleTableViewCell.swift */; };
+		5B6629902835F5120099B8E5 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B66298F2835F5120099B8E5 /* ArticleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5B65BC36282E4A62004F4914 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5B65BC39282E604D004F4914 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		5B65BC3C282E6441004F4914 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		5B66298F2835F5120099B8E5 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5B65BC3C282E6441004F4914 /* ArticleTableViewCell.swift */,
+				5B66298F2835F5120099B8E5 /* ArticleTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6629902835F5120099B8E5 /* ArticleTableViewCell.xib in Resources */,
 				5B65BC27282E3A45004F4914 /* LaunchScreen.storyboard in Resources */,
 				5B65BC24282E3A45004F4914 /* Assets.xcassets in Resources */,
 				5B65BC22282E3A23004F4914 /* Main.storyboard in Resources */,

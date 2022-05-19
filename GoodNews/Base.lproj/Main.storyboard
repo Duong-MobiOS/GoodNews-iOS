@@ -16,45 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleTableViewCell" rowHeight="80" id="cX4-N3-vNv" customClass="ArticleTableViewCell" customModule="GoodNews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cX4-N3-vNv" id="v0d-cT-2tZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9W4-68-BtS">
-                                            <rect key="frame" x="16" y="8" width="382" height="64"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3i-g3-B6x" userLabel="Title Label">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="41"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-R4-blG" userLabel="Description Label">
-                                                    <rect key="frame" x="0.0" y="47" width="382" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="9W4-68-BtS" firstAttribute="leading" secondItem="v0d-cT-2tZ" secondAttribute="leading" constant="16" id="132-GX-DR9"/>
-                                        <constraint firstItem="9W4-68-BtS" firstAttribute="top" secondItem="v0d-cT-2tZ" secondAttribute="top" constant="8" id="CuJ-8p-taj"/>
-                                        <constraint firstAttribute="trailing" secondItem="9W4-68-BtS" secondAttribute="trailing" constant="16" id="Wcm-hR-AyA"/>
-                                        <constraint firstAttribute="bottom" secondItem="9W4-68-BtS" secondAttribute="bottom" constant="8" id="yTs-6q-8Mk"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="descriptionLabel" destination="fgN-R4-blG" id="P2b-65-0rc"/>
-                                    <outlet property="titleLabel" destination="u3i-g3-B6x" id="FFJ-bA-Lfd"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="1JI-O7-IXE" id="cbZ-pg-Pfk"/>
                             <outlet property="delegate" destination="1JI-O7-IXE" id="796-34-bbO"/>

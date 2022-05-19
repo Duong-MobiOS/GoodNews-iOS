@@ -16,6 +16,7 @@ class DetailsNewsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        registerTableViewCells()
     }
     
 
@@ -23,7 +24,7 @@ class DetailsNewsController: UITableViewController {
     private func setup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
-        
+
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=590f4a541501431bbad210b5e2a6c9e8")!
         
         Webservice().getArticles(url: url) { articles in
@@ -32,7 +33,7 @@ class DetailsNewsController: UITableViewController {
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    self.
+                    
                 }
             }
             
@@ -49,17 +50,28 @@ class DetailsNewsController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+       
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as? ArticleTableViewCell else {
             fatalError("ArticleTableViewCell not found")
         }
         
         let articleVM = self.articleListVM.articleAtIndex(indexPath.row)
         cell.titleLabel.text = articleVM.title
-        cell.descriptionLabel.text = articleVM.description
+        cell.authorLabel.text = articleVM.author
+        cell.dateLabel.text = articleVM.publishedAt
+        cell.newsImage.load(urlString: articleVM.urlToImage)
+        cell.selectionStyle = .none
+    
         return cell
     }
     
- 
+    private func registerTableViewCells() {
+        let newCell = UINib(nibName: "ArticleTableViewCell", bundle: nil)
+        self.tableView.register(newCell, forCellReuseIdentifier: "ArticleTableViewCell")
+    }
+
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let articleVM = self.articleListVM.articleAtIndex(indexPath.row)
         
@@ -69,5 +81,22 @@ class DetailsNewsController: UITableViewController {
         }
     }
     
+}
+
+extension UIImageView {
+    func load(urlString : String) {
+        guard let url = URL(string: urlString)else {
+            return
+        }
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }
 
